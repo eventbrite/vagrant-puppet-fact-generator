@@ -20,14 +20,9 @@ DESC
       end
 
       # define hooks
-      action_hook 'setup', 'machine_action_up' do |hook|
+      action_hook 'setup_provision' do |hook|
         require_relative 'actions/generate_facts'
-        hook.prepend(Action::GenerateFacts)
-      end
-
-      action_hook 'setup_provision', 'machine_action_provision' do |hook|
-        require_relative 'actions/generate_facts'
-        hook.prepend(Action::GenerateFacts)
+        hook.before Vagrant::Action::Builtin::Provision, Action::GenerateFacts
       end
 
     end
