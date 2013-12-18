@@ -20,7 +20,7 @@ module VagrantPlugins
       end
 
       def finalize!
-        @facts = nil if @facts == UNSET_VALUE
+        @facts = {} if @facts == UNSET_VALUE
       end
 
       def validate(machine)
