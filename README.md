@@ -10,6 +10,8 @@ vagrant plugin install vagrant-soa
 
 ## Usage
 
+This plugin allows other plugins to specify puppet facts before provisioning the machine.
+
 ## Development
 
 ``` bash
@@ -19,8 +21,7 @@ $ bundle exec vagrant up
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+1. Create your feature branch (`git checkout -b my-new-feature`)
+2. Commit your changes (`git commit -am 'Add some feature'`)
+3. Push to the branch (`git push origin my-new-feature`)
+4. Create new Pull Request
